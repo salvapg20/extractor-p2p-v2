@@ -19,9 +19,12 @@ jobs:
 
       - name: Instalar librerías
         run: pip install pandas requests
-
-      - name: Ejecutar script
-        run: python3 extractor.py
+        
+     - name: Ejecutar script
+        run: |
+          echo "Listando archivos actuales:"
+          ls -F
+          python3 extractor.py
 
       - name: Guardar cambios en el CSV
         run: |
